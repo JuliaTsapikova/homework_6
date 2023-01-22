@@ -12,9 +12,9 @@ int getUserData(string message)
     return result;
 }
 
-int [] Array(int length)
-{   int[] result = new int[length];
-    for(int i = 0; i < length; i++)
+int [] Array(int M)
+{   int[] result = new int[M];
+    for(int i = 0; i < M; i++)
     {
         Console.WriteLine($"Введите число: [{i}]");
         result[i] = int.Parse(Console.ReadLine()!);
@@ -50,8 +50,8 @@ int getCountOfNumbers(int[] array)
     }
     return count;
 }
-int length = getUserData("Введите длину массива: ");
-int[] array = Array(length);
+int M = getUserData("Введите длину массива: ");
+int[] array = Array(M);
 printArray(array);
 int count = getCountOfNumbers(array);
 Console.WriteLine($"Количество чисел больше 0 равно: {count}");
